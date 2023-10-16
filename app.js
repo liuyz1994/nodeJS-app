@@ -6,6 +6,7 @@ app.use(express.json())
 const port = process.env.PORT || 3000;
 
 app.head('/public', (req, res, next) => {
+    console.log("response", res);
     res.send({
         message: "working great!!!"
     });
@@ -13,7 +14,7 @@ app.head('/public', (req, res, next) => {
 
 app.post('/public', (req, res, next) => {
     var body = req.body;
-    console.log("POST: " + body);
+    console.log("POST: " + JSON.stringify(body));
     res.json({requestBody: req.body});
   });
 
