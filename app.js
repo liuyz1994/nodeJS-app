@@ -5,7 +5,7 @@ const app = express();
 app.use(express.json())
 const port = process.env.PORT || 3000;
 
-app.head('/public', (req, res, next) => {
+app.get('/public', (req, res, next) => {
     console.log("response", res);
     res.send({
         message: "working great!!!"
