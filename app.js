@@ -3,7 +3,7 @@ const bodyParser = require('body-parser')
 
 const app = express();
 app.use(express.json())
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 app.head('/public', (req, res, next) => {
     res.send({
