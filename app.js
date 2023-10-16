@@ -13,6 +13,7 @@ app.head('/public', (req, res, next) => {
 
 app.post('/public', (req, res, next) => {
     var body = req.body;
+    console.log("POST: " + body);
     res.json({requestBody: req.body});
   });
 
